@@ -1,0 +1,26 @@
+<h1>
+  What are the odds to save Endor ?
+
+</h1>
+
+<p>
+  Upload the data intercepted by the rebels about the plans of the Empire.
+</p>
+
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+{% if probability %}
+    <p> <b> Probability of success: {{ probability }} </b>
+
+    </p>
+{% endif %}
+
+<!--.<form enctype="multipart/form-data" method="post" action="/result/">
+  <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form>-->
